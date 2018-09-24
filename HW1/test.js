@@ -61,6 +61,6 @@ stringify = exercise.stringify;
 
 
 // console.log(cart.hasChocolate());
- console.log(cart.getTotalPrice());
- console.log(cart.getSalePrice());
+//  console.log(cart.getTotalPrice());
+//  console.log(cart.getSalePrice());
 // console.log(cart.hasEggs());

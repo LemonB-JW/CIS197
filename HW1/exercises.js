@@ -362,6 +362,7 @@ var stringify = function (object) {
     return value(object);
   }
 
+
   var isFirst = true;
   // if typeof object is object, we need to stringify the elements of it recursively.
   return '{' + Object.keys(object).map(function (k) {
@@ -385,6 +386,8 @@ var stringify = function (object) {
       return val.toString();
     case 'function':
       throw new Error('Illegal argument');
+      case 'undefined':
+      return 'undefined';
     case 'object':
       if (val instanceof Date) {
         return '"' + val.toISOString() + '"';
@@ -394,9 +397,6 @@ var stringify = function (object) {
       }
       if (val === null) {
         return 'null';
-      }
-      if (val === undefined) {
-        return undefined;
       }
       return stringify(val);
     }

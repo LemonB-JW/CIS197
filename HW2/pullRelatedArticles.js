@@ -4,7 +4,17 @@ var nyt = require('./api/nyt');
 // the JSON metadata
 var pullRelatedArticles = function (query, callback) {
   nyt.articleSearch(query, function (error, response, body) {
-    // Your code goes here
+    var object = {};
+    if (error === null && response.statusCode === 200) {
+      object['query'] = query;
+      object['JSON'] = body;
+      callback(null, object);
+          // to handle bad status code
+    } else if (error === null && response.statusCode !== 200) {
+      callback(new Error());
+    } else {
+      callback(error);
+    }
   });
 };
 
