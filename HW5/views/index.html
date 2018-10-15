@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>cis197 piazza lite</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+</head>
+<body>
+<% if (user) { %>
+<a href="/account/logout/">Logout</a>
+
+<h1> Hi you are logged in, <%= user%> </h1>
+
+<form method="POST">
+    Question: <br/>
+    <input type="text" name="question">
+    <br/>
+    <button type="submit">Add question</button>
+</form>
+<ul id="questions">
+    <% if (typeof questions == 'object') { %>
+    <% questions.forEach(function(q) { %>
+    <li><%= q.questionText %></li>
+    <% }) } %>
+</ul>
+<%} else {%>
+<h1> Welcome to CIS197 Piazza!</h1>
+<div>
+    <a href="/account/login">Log in</a> to submit a question
+</div>
+<div> Or signup now! <a href="/account/signup/">Signup</a></div>
+<% } %>
+</body>
+</html>
