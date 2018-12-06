@@ -3,8 +3,9 @@
     <extensionMap>
       <mapping pattern="UserOrg" type="CLASS" />
       <mapping pattern="Org" type="CLASS" />
-      <mapping pattern="OrgServiceImpl" type="JAVA" />
       <mapping pattern="OrgService" type="JAVA" />
+      <mapping pattern="OrgServiceImpl" type="JAVA" />
+      <mapping pattern="Register" type="JavaScript" />
       <mapping pattern="java" type="PLAIN_TEXT" />
       <mapping pattern="OrgService.java" type="PLAIN_TEXT" />
     </extensionMap>
