@@ -16,7 +16,7 @@
     "gulp-babel": "^6.1.2",
     "gulp-eslint": "^5.0.0",
     "gulp-zip": "^3.0.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "mocha": "^5.2.0",
     "sinon": "1.10.3"
   }
